@@ -3,8 +3,8 @@ name: Flutter APK Build
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+  branches:
+    - master
 
 jobs:
   build:
