@@ -3,8 +3,8 @@ name: Flutter APK Build
 on:
   workflow_dispatch:
   push:
-  branches:
-    - master
+    branches:
+      - master
 
 jobs:
   build:
@@ -35,5 +35,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk        with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
