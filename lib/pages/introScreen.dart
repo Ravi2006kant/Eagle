@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 import 'dart:async';
 
+import 'package:eagle/pages/anim.dart';
 import 'package:flutter/material.dart';
 
 class Introscreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _IntroscreenState extends State<Introscreen> {
   void initState(){
     super.initState();
   Timer(Duration(seconds:2 ), (){
-    Navigator.pushNamed(context, 'new');
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Anim()));
   });
  }
 

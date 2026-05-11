@@ -19,11 +19,15 @@ class _HomepageState extends State<Homepage> {
     appBar: AppBar(
       title: Text("hello"),
     ),
-    body: Container(
-      height: 100,
-      width: 250,
-      color: Colors.blue,
-      child: Icon(Icons.radio,size: 50,color: Colors.amber,),
+    body: Hero(
+      tag: 'next',
+      
+      child: Container(
+        height: 100,
+        width: 250,
+        color: Colors.blue,
+        child: Icon(Icons.radio,size: 50,color: Colors.amber,),
+      ),
     ),
    ); 
   }
