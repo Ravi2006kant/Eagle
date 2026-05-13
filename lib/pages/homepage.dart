@@ -8,7 +8,9 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  
   @override
+
   Widget build(BuildContext context) {
     
    return Scaffold(
@@ -16,9 +18,11 @@ class _HomepageState extends State<Homepage> {
     drawer: Drawer(
       width: 250,
     ),
+
     appBar: AppBar(
       title: Text("hello"),
     ),
+
     body: Hero(
       tag: 'next',
       

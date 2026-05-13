@@ -53,14 +53,12 @@ class _AnimState extends State<Anim> {
             },
             child: Padding(
               padding: const EdgeInsets.only(right: 5),
-              child: Icon(ic, size: 35, color: Colors.amberAccent),
-            ),
-          ),
+              child: Icon(ic, size: 35, color: Colors.amberAccent), 
+            ),  
+          ), 
         ],
       ),
       body: Center(
-        
-          
           
           child: AnimatedContainer(
             decoration: BoxDecoration(
@@ -140,7 +138,7 @@ class _AnimState extends State<Anim> {
                 ElevatedButton(
                   onPressed: () {
                     
-                    
+
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text("Application Submitted")),
                     );
@@ -155,11 +153,3 @@ class _AnimState extends State<Anim> {
     );
   }
 }
-
-/* 
-
-opacirty 
-pasword toggle 
-smooth transition - animate button / snackbar
-
-*/
