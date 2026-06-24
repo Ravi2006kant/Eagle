@@ -10,7 +10,8 @@ class Test extends StatefulWidget {
 
 class _TestState extends State<Test> {
   var input = TextEditingController();
-  var nameValue = "dsfg";
+  var nameVal = "";
+  
   @override
   void initState() {
     super.initState();
@@ -49,11 +50,27 @@ class _TestState extends State<Test> {
       ),
     );
   }
-}
 
 void getValue() async {
   var sharepref = await SharedPreferences.getInstance();
   var getName = sharepref.getString('name');
 
-  nameValue = getName!;
+  nameVal = getName!;
 }
+
+}
+/*
+
+toggle button 
+like 
+
+
+proper form validation name cannot be empty 
+list and map
+
+passing data between screens 
+
+reusable widget custome button widget cutsom tectfield widget
+
+
+*/
