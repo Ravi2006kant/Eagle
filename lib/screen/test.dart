@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 
 class Test extends StatefulWidget {
   const Test({super.key});
@@ -16,7 +16,7 @@ class _TestState extends State<Test> {
   void initState() {
     super.initState();
     setState(() {
-      getValue();
+      
     });
   }
 
@@ -40,9 +40,9 @@ class _TestState extends State<Test> {
           ElevatedButton(
             onPressed: () async {
               var name = input.text.toString();
-              var sharepref = await SharedPreferences.getInstance();
+              
 
-              sharepref.setString("name", name);
+              
             },
             child: Text("Click"),
           ),
@@ -51,12 +51,8 @@ class _TestState extends State<Test> {
     );
   }
 
-void getValue() async {
-  var sharepref = await SharedPreferences.getInstance();
-  var getName = sharepref.getString('name');
+  
 
-  nameVal = getName!;
-}
 
 }
 /*

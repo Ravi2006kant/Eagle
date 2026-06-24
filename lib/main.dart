@@ -7,6 +7,26 @@ import 'package:eagle/pages/statef.dart';
 import 'package:eagle/student/student.dart';
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      routes: {'may13': (context) => May13(), 'hello': (context) => Hello()},
+      home:
+          May13(), // <--- THIS SAYS "THIS IS THE PROBLEM" BECAUSE IT DESTROYS THE DATA PACKAGES!
+    );
+  }
+}
+
+
 // List<String> stud = ["kalix", "alex", "john"];
 // List<int> mark = [90, 50, 10];
 // void main() {
@@ -37,24 +57,3 @@ import 'package:flutter/material.dart';
 
 
 
-
-
-
-// runApp(MyApp());
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-    
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-      
-//   routes: {
-//     'may13': (context) => May13(),
-//     'hello': (context) => Hello(),
-//   },
-//   home: May13(), // <--- THIS SAYS "THIS IS THE PROBLEM" BECAUSE IT DESTROYS THE DATA PACKAGES!
-// );
-//   }
-// }
